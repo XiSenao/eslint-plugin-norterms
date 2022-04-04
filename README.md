@@ -62,11 +62,17 @@ module.exports = {
     },
     plugins: ['norterms'],
     rules: {
-        'norterms/replacement': ["error", { forceUpdateConfig: true, maxCacheTime: 24 * 60 * 60 * 1000 }]
+        'norterms/replacement': [
+            "error", { 
+                forceUpdateConfig: true, 
+                maxCacheTime: 24 * 60 * 60 * 1000 
+            }
+        ]
     },
 };
 
-The second item of the rules array can pass the object options, Now the following parameters are supported.
+The second item of the rules array can pass the object options, Now 
+the following parameters are supported.
 
 interface NortermsOptions {
     /** force config update. default false. */
