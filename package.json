@@ -1,5 +1,5 @@
 {
-  "name": "@youzan/eslint-plugin-norterms",
+  "name": "eslint-plugin-norterms",
   "version": "0.2.2",
   "description": "Standard word detection",
   "keywords": [
