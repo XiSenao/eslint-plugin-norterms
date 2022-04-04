@@ -46,7 +46,7 @@ Then configure the rules you want to use under the rules section.
 
 ## Quick Usage
 Create a new `.eslintrc` file 
-```javascript
+```typescript
 module.exports = {
     env: {
         browser: true,
@@ -62,11 +62,22 @@ module.exports = {
     },
     plugins: ['norterms'],
     rules: {
-        'norterms/replacement': ["error"]
+        'norterms/replacement': ["error", { forceUpdateConfig: true, maxCacheTime: 24 * 60 * 60 * 1000 }]
     },
 };
 
+The second item of the rules array can pass the object options, Now the following parameters are supported.
+
+interface NortermsOptions {
+    /** force config update. default false. */
+    forceUpdateConfig: boolean;
+    /** config cache time. default 7 days, unit: ms. */
+    maxCacheTime: number;
+}
+
 ```
+
+
 
 Then add the script to package.json, as shown below
 
