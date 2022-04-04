@@ -1,0 +1,29 @@
+{
+  "name": "@youzan/eslint-plugin-norterms",
+  "version": "0.2.2",
+  "description": "Standard word detection",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "author": "eslint-plugin-norterms",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha tests --recursive"
+  },
+  "dependencies": {
+    "console-grid": "1.0.17",
+    "requireindex": "1.1.0",
+    "boxen": "5.0.1",
+    "chalk": "2.4.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.1.0",
+    "mocha": "^7.2.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "license": "ISC"
+}
