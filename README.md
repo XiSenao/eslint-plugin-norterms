@@ -80,6 +80,25 @@ Then add the script to package.json, as shown below
 
 Then just need to execute the script to run it
 
+## Quick Dev
+```javascript
+/** install dependence first  */
+yarn pre
+
+/** establish soft link */
+yarn link:pre
+
+/** execute eslint */
+yarn lint
+
+/** execute eslint --fix */
+yarn lint:fix
+
+/** start dev-pro */
+yarn dev
+
+```
+
 ## Supported Rules
 
 * Fill in provided rules here
