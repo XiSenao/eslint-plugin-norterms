@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-norterms",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Standard word detection",
   "keywords": [
     "eslint",
@@ -10,7 +10,12 @@
   "author": "eslint-plugin-norterms",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha tests --recursive"
+    "test": "mocha tests --recursive",
+    "link:pre": "make link",
+    "lint": "make lint",
+    "lint:fix": "make lint-fix",
+    "pre": "make pre",
+    "dev": "make dev"
   },
   "dependencies": {
     "axios": "^0.26.1",
