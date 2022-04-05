@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-norterms",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Standard word detection",
   "keywords": [
     "eslint",
