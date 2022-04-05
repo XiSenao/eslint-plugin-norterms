@@ -7,7 +7,7 @@
     "eslintplugin",
     "eslint-plugin"
   ],
-  "author": "eslint-plugin-norterms",
+  "author": "Ashen",
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha tests --recursive",
@@ -16,6 +16,10 @@
     "lint:fix": "make lint-fix",
     "pre": "make pre",
     "dev": "make dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FinalAshen/eslint-plugin-norterms"
   },
   "dependencies": {
     "axios": "^0.26.1",
