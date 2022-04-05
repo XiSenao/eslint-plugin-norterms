@@ -14,6 +14,6 @@ module.exports = {
     'norterms',
   ],
   rules: {
-    'norterms/replacement': ['warn', { forceUpdateConfig: true }],
+    'norterms/replacement': ['warn', { forceUpdateConfig: true, configSrc: 'https://gitee.com/Xashen/eslint-plugin-norterms/raw/master/config' }],
   },
 };
