@@ -1,8 +1,0 @@
-{
-  "commands": {
-    "publish": {
-      "node": "v14.15.0",
-      "saveVersionToDatabase": false
-    }
-  }
-}

@@ -15,14 +15,27 @@
     "lint": "make lint",
     "lint:fix": "make lint-fix",
     "pre": "make pre",
-    "dev": "make dev"
+    "dev": "make dev",
+    "build": "webpack"
   },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js",
+    "cjs"
+  ],
   "dependencies": {
+    "@babel/core": "^7.17.8",
     "axios": "^0.26.1",
+    "babel-loader": "^8.2.4",
     "boxen": "5.0.1",
     "chalk": "2.4.2",
+    "clean-webpack-plugin": "^4.0.0",
     "console-grid": "1.0.17",
-    "requireindex": "1.1.0"
+    "requireindex": "1.1.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^5.71.0",
+    "webpack-cli": "^4.9.2"
   },
   "devDependencies": {
     "eslint": "^7.1.0",
