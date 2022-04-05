@@ -79,7 +79,88 @@ interface NortermsOptions {
     forceUpdateConfig: boolean;
     /** config cache time. default 7 days, unit: ms. */
     maxCacheTime: number;
+    /** 
+     * support remote access to configuration information.
+     * please configure according to the requirements, 
+     * and the built-in configuration is tested according to the specifications.
+     * default config src: https://gitee.com/Xashen/eslint-plugin-norterms/raw/master/config.
+     * */
+    configSrc: string;
 }
+
+Profile specification
+
+/**
+ * 
+ * 	Type:
+ *    type: 'array' 
+ *    If validate returns an object, each item in the array needs to be detected according to the object returned by validate.
+ *    Each item in the array is directly verified by the validate function.
+ *  
+ *    type: 'object'
+ *    The validate function needs to return an object containing the properties of the configuration object
+ * 
+ *  Require:
+ *    Mandatory items will be verified. Non mandatory items will be verified only when there is a value.
+ * 
+ */
+
+
+const CONFIG_REQUIRE_PROPERTY = {
+	name: {
+		type: 'string',
+		require: true,
+		validate (name) {
+			return typeof name === 'string';
+		}
+	},
+	logPath: {
+		type: 'string',
+		validate (_logPath) {
+			return true;
+		}
+	},
+	fullSuspSets: {
+		type: 'string',
+		validate (_logPath) {
+			return true;
+		}
+	},
+	option: {
+		type: 'array',
+		require: true,
+		validate () {
+			return {
+				name: {
+					type: 'string',
+					require: true,
+					validate (name) {
+						return typeof name === 'string';
+					}
+				},
+				suspSets: {
+					type: 'array',
+					require: true,
+					validate (suspSets) {
+						return typeof suspSets === 'string';
+					}
+				},
+				description: {
+					type: 'string',
+					validate (_description) {
+						return true;
+					}
+				},
+				logPath: {
+					type: 'string',
+					validate (_logPath) {
+						return true;
+					}
+				}
+			}
+		}
+	}
+};
 
 ```
 
